@@ -1,39 +1,39 @@
 class Board
-  # create 24 empty "buckets"
+
   def initialize
-    @buckets = (1..24).map { |bucket|
-          []
-    }
+    @buckets = Array.new(24) { [] }
   end
 
-  #display 24 empty buckets
+
   def display
-
-    buckets.each_with_index { |bucket, position|
+    @buckets.each_with_index { |bucket, position|
       puts "#{position + 1} > #{bucket}"
-        #puts position.to_s + "> "
     }
+    self
   end
 
-  private
 
-  attr_reader :buckets
+#  private
+#  attr_reader :buckets
 
-  def buckets
-    @buckets
+#  def buckets
+#    @buckets
+#  end
+#end
+
+# fill the correct buckets with the proper number of pieces
+# White = "W"
+# Black = "B"
+
+  def fill_buckets
+    @buckets[0].push("B", "B")
+    self
   end
+
 end
 
-  # fill the correct buckets with the proper number of pieces
-  def fill_backets
-    
-  end
-
-  # display buckets with pieces on the board
+board = Board.new
 
 #Board.new.setup.display
-Board.new.display
+board.display.fill_buckets.display
 #puts Board.new.buckets
-
-#White = "W"
-#Black = "B"
