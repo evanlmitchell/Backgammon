@@ -20,7 +20,14 @@ class Board
 
 
   def set_up
-    
+    add_piece(1, "B"*2)
+    add_piece(6, "W"*5)
+    add_piece(8, "W"*3)
+    add_piece(12, "B"*5)
+    add_piece(13, "W"*5)
+    add_piece(17, "B"*3)
+    add_piece(19, "B"*5)
+    add_piece(24, "W"*2)
   end
 
 end
